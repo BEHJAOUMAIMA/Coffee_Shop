@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&family=Kaushan+Script&family=Pacifico&family=Poppins:wght@500;600;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #efefef;
+}
+
+.navbar{
+    background-color: #efefef;
+}
+.logo{
+    width:44px;
+    height: 40px;
+}
+.title{
+    font-family: 'Caveat', cursive;
+    font-size: 29px;
+    font-weight: bolder;
+}
+.introduction{
+    background-image: url('../images/bgIntro1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 380px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+}
+.titre{
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+    margin-left: 50px;
+}
+.text{
+    font-size: 22px; 
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.menu-title{
+    font-weight: bolder;
+    font-size: 70px;
+    color: #441d0b;
+    font-family: 'Kaushan Script', cursive;
+    animation: backInLeft;
+    animation-duration: 8s;
+}
+.citation{
+    font-size: 20px;
+    font-weight: 600;
+}
+.menu-item{
+    width: 90%;
+    height: 60px;
+    background-color: #414143;
+    color:white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.fiche{
+    background-image: url('../images/bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 380px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+}
+.fiche-title{
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+    color: white;
+    animation:flash;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.fiche-text{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+#bx1:hover {
+    color: #386bbe;
+    transform: scale(1.5);
+}
+
+#bx2:hover {
+    color: rgb(29, 155, 240);
+    transform: scale(1.5);
+}
+
+#bx3:hover {
+    color: #C13584;
+    transform: scale(1.5);
+}
+
+#bx4:hover {
+    color: red;
+    transform: scale(1.5);
+}
+
+#bx5:hover {
+    color: rgb(16, 199, 16);
+    transform: scale(1.5);
+}
+.row {
+    background-color: white;
+    border-radius: 30px;
+}
