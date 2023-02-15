@@ -1,11 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    @if(session('notif'))
-    <div class="alert alert-success mb-1 mt-1 container">
-        {{ session('notif') }}
-    </div>
-    @endif
 
 <form 
         id="formAccountSettings" 
@@ -15,7 +10,7 @@
     >
     @csrf
     <div class="container">
-        <div class="row"  style="background-color:#efefef;">
+        <div class="row">
             <div class="mb-3 col-md-6">
                 <label for="name" class="form-label">{{ trans('Name')}}</label>
                 <input class="form-control" type="text" id="name" name="name" value="{{ auth()->user()->name }}" autofocus="" required>

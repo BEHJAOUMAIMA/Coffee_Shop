@@ -23,7 +23,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('profile/{user}',[ProfileController::class,'update'])->name('profile.update');
   });
 
-
+  Route::get('/change-password', [ProfileController::class, 'changePassword'])->name('change-password');
+  Route::post('/change-password', [ProfileController::class, 'updatePassword'])->name('update-password');
 
 Auth::routes();
 

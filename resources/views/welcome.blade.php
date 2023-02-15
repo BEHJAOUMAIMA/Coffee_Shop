@@ -39,11 +39,6 @@
                                 </li>
                             @endif
 
-                            {{-- @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link aut fs-6 text-dark fw-semibold me-3 text-decoration-none" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif --}}
                         @else
                             <li class="nav-item dropdown">
                                 @if (Route::has('register'))
@@ -58,6 +53,9 @@
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{route('profile')}}">
                                         Edit Profile
+                                    </a>
+                                    <a class="dropdown-item" href="{{route('change-password')}}">
+                                        Change Password
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -77,7 +75,11 @@
         </nav>
         
     <section class="">
-       
+        @if(session('notif'))
+        <div class="alert alert-success mb-1 mt-1 container">
+            {{ session('notif') }}
+        </div>
+        @endif
         <div class="introduction mx-auto mt-5 d-flex justify-content-center text-white flex-column">
             <p class="titre pt-3">ENJOY YOUR</p>
             <p class="titre">MORNING COFFEE .</p>
@@ -90,24 +92,6 @@
             <p class="citation">A gathering place in Downtown Farmville! Stop by and enjoy coffee, tea, live music,</p>
             <p class="citation">ice cream and much more!</p>
         </div>
-        {{-- <div>
-            <p class="fs-3 fw-bold text-center">Our Menu</p>  
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4 mx-auto my-4" style="width:90%;background-color: #efefef;">
-            @foreach ($dishes as $dish)
-            <div class="col">
-                <div class="card rounded-4" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
-                <img src="{{$dish->image_path}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{$dish->name}}</h5>
-                    <p class="">{{$dish->Category}}</p>
-                    <p class="card-text text-truncate">{{$dish->description}}</p>
-                    <button class="btn border-0 text-white px-4 my-3" style="background-color: #567189;box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;">{{$dish->price}} Euro</button>             
-                </div>
-                </div>
-            </div>
-            @endforeach
-        </div> --}}
 
         <div class="fiche mx-auto mt-5 d-flex align-items-center justify-content-evenly">
             <div style="width: 250px;">
